@@ -10,4 +10,4 @@
   - Funciona com apps como, por exemplo, Duo Mobile (Dispositivo MFA virtual)
 - Action (operação que pode performar) / Effect (allow ou deny) / Resource
 - Já possui várias politicas padrões que pode utilizar, mas é possível criar politicas customizadas
-- É recomendado criar grupos e nunca aplicar a política direto a uma pessoa usuária diretamente
+- É recomendado criar grupos e nunca aplicar a política direto a uma pessoa usuária diretamente (sempre com o mínimo de permissões necessárias)

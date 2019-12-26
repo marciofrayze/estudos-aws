@@ -29,7 +29,7 @@
 - Ouve uma porta (ex: um para 80 e outro pra 443)
 - É criado dentro de uma VPC
 - É habilitado para N availability zones
-- Deve ser associado à um security group (quais ips podem acessar uma determinad porta)
+- Deve ser associado à um security group (quais ips podem acessar uma determinada porta)
 - É criado um Target group (podendo ser do tipo Instance, IP ou Lambda Function)
   - Neste passo, cuidado ao preencher a porta. Deve ser a porta que a aplicação está escutando internamente
 - Possui uma URL para healthcheck
@@ -38,6 +38,6 @@
 ## AMI (Amazon Machine Image)
 -  É possível criar a partir de uma instância criada (EC2 -> Instances -> Actions -> Image -> Create Image)
 
-## Auto scalling group
+## Auto scaling group
 - Você escolhe qual imagem que será usada (para usar a sua já previamente criada, selecione "My AMIs")
 - Escolhe que tipo de instância EC2 será criada (t2.micro, t2.medium, etc indicando poder computacional da máquina)

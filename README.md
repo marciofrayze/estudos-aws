@@ -1,7 +1,7 @@
 # CloudWatch
 
 - Monitoramento  
-  - Possibilita, por exemplo, enviar um alerta quando exceder X dolares  
+  - Possibilita, por exemplo, enviar um alerta quando exceder X dólares  
   
 # IAM (Identity and Access Management)
 
@@ -25,3 +25,11 @@
 - Access Control List (filtro por ips, por exemplo)
 - Pode possuir um grupo de Subnets
 
+# Load Balancer
+- Ouve uma porta (ex: um para 80 e outro pra 443)
+- É criado dentro de uma VPC
+- É habilitado para N availability zones
+- Deve ser associado à um security group (quais ips podem acessar uma determinad porta)
+- É criado um Target group (podendo ser do tipo Instance, IP ou Lambda Function)
+  - Neste passo, cuidado ao preencher a porta. Deve ser a porta que a aplicação está escutando internamente
+- Possui uma URL para healthcheck

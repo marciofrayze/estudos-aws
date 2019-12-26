@@ -44,3 +44,6 @@
 
 ## Security group
 - É possível configurar para que aceite conexões apenas através de um load baleancer previamente criado (Security group -> Inbound -> Edit -> No campo Source, selecione o security group com load balancer no lugar do IP).
+
+## Elastic IP addresses
+- É possível criar um ip estático publico e associa-lo com recurso que desejar. É possível associa-lo com outro recurso depois.

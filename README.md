@@ -41,3 +41,6 @@
 ## Auto scaling group
 - Você escolhe qual imagem que será usada (para usar a sua já previamente criada, selecione "My AMIs")
 - Escolhe que tipo de instância EC2 será criada (t2.micro, t2.medium, etc indicando poder computacional da máquina)
+
+## Security group
+- É possível configurar para que aceite conexões apenas através de um load baleancer previamente criado (Security group -> Inbound -> Edit -> No campo Source, selecione o security group com load balancer no lugar do IP).

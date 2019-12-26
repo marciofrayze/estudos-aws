@@ -17,7 +17,7 @@
 # EC2 (Elastic Compute Cloud)
 
 
-# VPC (Virtual Private Cloud)
+## VPC (Virtual Private Cloud)
 - IPs privados
 - Routing
 - Security groups
@@ -25,7 +25,7 @@
 - Access Control List (filtro por ips, por exemplo)
 - Pode possuir um grupo de Subnets
 
-# Load Balancer
+## Load Balancer
 - Ouve uma porta (ex: um para 80 e outro pra 443)
 - É criado dentro de uma VPC
 - É habilitado para N availability zones
@@ -33,3 +33,11 @@
 - É criado um Target group (podendo ser do tipo Instance, IP ou Lambda Function)
   - Neste passo, cuidado ao preencher a porta. Deve ser a porta que a aplicação está escutando internamente
 - Possui uma URL para healthcheck
+- Permite fidelizar a sessão (através de um cookie) chamado de "stickiness". Fica associado ao target group.
+
+## AMI (Amazon Machine Image)
+-  É possível criar a partir de uma instância criada (EC2 -> Instances -> Actions -> Image -> Create Image)
+
+## Auto scalling group
+- Você escolhe qual imagem que será usada (para usar a sua já previamente criada, selecione "My AMIs")
+- Escolhe que tipo de instância EC2 será criada (t2.micro, t2.medium, etc indicando poder computacional da máquina)

@@ -47,3 +47,24 @@
 
 ## Elastic IP addresses
 - É possível criar um ip estático publico e associa-lo com recurso que desejar. É possível associa-lo com outro recurso depois.
+
+## S3 (Simple Storage Service)
+- Armezana objetos (não importando o tipo)
+- Permite gerenciar quem pode consulta-los
+- Objetos são separados em "buckets"
+  - Um bucket serve para armazenar um grupo de arquivos
+  - Serve tbm para criar uma URL de acesso
+  - O nome do balde precisa ser único para todo S3 (não apenas na sua conta)
+- Um objeto pode ter até 5 terabytes (mas tem um limite de upload de 5Gb, para mais que isso precisa usar uma ferramenta de multipart
+- Pode escolher qual região do mundo serão armazenados
+- Além do arquivo, armazena também meta-dados (file type, data de modificação, etc)
+- Um objeto é idenficado pela sua chave, formada pelo path e nome do arquivo, excluindo o nome do bucket (ex: images/image.png)
+- É possível utilizar o IAM para dar permissões de acesso
+- Existe a opção de "cross region replication" para diminuir a latência e aumentar a redundância
+  - Permite a redundância para apenas uma outra região, para ter no mundo todo, use o CloudFront
+- AWS Policy Generator (ferramenta para facilitar a criação de politicas de acesso)
+- Copiando arquivos para um bucket via linha de comando:
+  - aws s3 cp <pasta>-s3 s3://<bucket-name>/<pasta> --recursive
+- Permite acessar os arquivos diretamente por uma URL (podendo inclusive deixar o acesso público)
+- É possível habilitar CORs (por bucket)
+- Existe SDKs para fazer upload diretamente para o S3

@@ -68,3 +68,13 @@
 - Permite acessar os arquivos diretamente por uma URL (podendo inclusive deixar o acesso público)
 - É possível habilitar CORs (por bucket)
 - Existe SDKs para fazer upload diretamente para o S3
+
+## DataBases
+
+### RDS (Relational Database Service)
+- Várias engines disponíveis: Amazon Aurora, PostgreSQL, MySQL, MariaDB, Oracle Database e SQL Server
+- Permite replicar em zonas diferentes
+  - Failover automatico
+- Permite criar replica da base para apenas leitura
+  - Consistência eventual
+  - Neste caso, não é usada como failover

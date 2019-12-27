@@ -78,3 +78,14 @@
 - Permite criar replica da base para apenas leitura
   - Consistência eventual
   - Neste caso, não é usada como failover
+
+### DynamoDB
+- Não relacional (NoSQL)
+- Schemaless
+- É formado por um conjunto de tables
+- Cada tabela tem um conjunto de itens.
+- Cada item tem uma primary key (obrigatóriamente)
+- A chave primária pode ser uma string, número ou binário
+- A tabela tem um "provisioned throughput capacity"
+  - Quantidade de operações de leitura/escrita por segundo (baseado em uma unidade de 4kb)
+  - Se passar o limite estabelecido, a amazon pode fazer throttle ou até mesmo recusar a requisição

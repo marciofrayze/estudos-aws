@@ -64,7 +64,7 @@
   - Permite a redundância para apenas uma outra região, para ter no mundo todo, use o CloudFront
 - AWS Policy Generator (ferramenta para facilitar a criação de politicas de acesso)
 - Copiando arquivos para um bucket via linha de comando:
-  - aws s3 cp <pasta>-s3 s3://<bucket-name>/<pasta> --recursive
+  - `aws s3 cp <pasta>-s3 s3://<bucket-name>/<pasta> --recursive`
 - Permite acessar os arquivos diretamente por uma URL (podendo inclusive deixar o acesso público)
 - É possível habilitar CORs (por bucket)
 - Existe SDKs para fazer upload diretamente para o S3

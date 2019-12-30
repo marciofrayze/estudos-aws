@@ -103,3 +103,11 @@
    - Permite criar do zero ou importar um template previamente criado
  - CloudFormer
    - Cria um CloudFormation template a partir da uma infraestrutura previamente criada
+
+## Elastic Beanstalk
+  - Automatiza scaling, monitoring e resource provisioning
+  - Executa aplicação em uma plataforma específica (node.js, Java, etc)
+  - Armazena no S3 uma ou mais versão do seu app, permitindo por exemplo fazer rollback do deploy
+  - Permite ter vários environments (ex: dev e prod)
+    - cada um tem seu próprio AMI, EC2 instance, auto scalling group etc
+    - cada environment pode ter uma versão diferente da aplicação rodando

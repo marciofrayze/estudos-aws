@@ -89,3 +89,17 @@
 - A tabela tem um "provisioned throughput capacity"
   - Quantidade de operações de leitura/escrita por segundo (baseado em uma unidade de 4kb)
   - Se passar o limite estabelecido, a amazon pode fazer throttle ou até mesmo recusar a requisição
+  
+## Cloud Formation
+ - Permite provisionar recursos utilizando templates (em formato json)
+ - É possível, por exemplo, recriar a infrastrutura facilmente (ex: replicar todo ambiente de produção em um ambiente de dev)
+ - Você pode versionar os templates no git e fazer rollback se precisar
+ - CloudFormation Stack
+  - Grupo de recursos AWS
+  - É possivel atualizar ou deletar uma stack
+  - No caso de atualizar, tentará fazer isso sem reiniciar sua instancia, se possível
+ - CloudFormation Designer 
+  - Ferramante "drag and drop" para criar templates
+  - Permite criar do zero ou importar um template previamente criado
+ - CloudFormer
+  - Cria um CloudFormation template a partir da uma infraestrutura previamente criada

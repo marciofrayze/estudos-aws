@@ -115,3 +115,9 @@ Criei este repositório apenas para registrar algumas notas enquanto estudo sobr
   - Permite ter vários environments (ex: dev e prod)
     - cada um tem seu próprio AMI, EC2 instance, auto scalling group etc
     - cada environment pode ter uma versão diferente da aplicação rodando
+
+## Cloud Front
+  - Global CDN
+  - Tem como objetivo diminuir a latência
+    - Para isso, tenta diminuir a distância entre as usuárias e o app
+  - Funciona em apps previamente criados, sem necessidade de alterações

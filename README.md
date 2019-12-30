@@ -1,3 +1,7 @@
+# AWS
+
+Criei este repositório apenas para registrar algumas notas enquanto estudo sobre a AWS.
+
 # CloudWatch
 
 - Monitoramento  

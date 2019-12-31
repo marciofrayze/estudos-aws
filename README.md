@@ -121,3 +121,43 @@ Criei este repositório apenas para registrar algumas notas enquanto estudo sobr
   - Tem como objetivo diminuir a latência
     - Para isso, tenta diminuir a distância entre as usuárias e o app
   - Funciona em apps previamente criados, sem necessidade de alterações
+  
+## EC2 Instance
+  - Uma instância EC2 é separada em duas partes: 
+    - Execution Environment (CPU, Memory, Bandwidth)
+    - File System (três tipos)
+
+## EC2 File System
+  - Existem 3 formas possíveis de tratar file system em uma instância EC2
+    - Instance Store
+      - Fisicamente conectados à instância
+      - Funciona basicamente como um hard drive
+      - Não podem ser re-utilizados para outras instâncias EC2
+    - Elastic Block Storage (EBS)
+      - Pode ser associada a mais instâncias
+      - Pode sobreviver mesmo que a instância EC2 seja destruida
+    - Elastic File System (EFS)
+      - Similar ao EBS, mas tem tamanho escalável
+
+## AMI (Amazon Machine Image)
+  - Cada instância no EC2 precisa de uma AMI
+  - Uma AMI pode ter apenas o Sistema Operacional (Linux ou Windows por exemplo) ou SO + Softwares pré-instalados (proprietário ou open-souce). Ex: Uma máquina Linux com node.js pré-instalado.
+  - Você pode criar sua própria imagem com os softwares que quiser.
+    - Pode inclusive criar de forma incremental. Cria uma máquina com Linux, instala os softwares que quiser a cria uma AMI a partir dela.
+  - Pode escolher uma imagem a partir da AWS Marketplace.
+  - Tipos de visibilidade de uma AMI
+    - Public (qualquer um pode utilizar e iniciar uma instância a partir desta imagem)
+    - Explicit (visível para quem você permitir acessa-la)
+    - Implicit (privada)
+    - Pode ser publicada na AWS Markplace
+    
+## Criando uma instância a partir de uma AMI
+  - Podem ser usadas duas formas para criar a AMI:
+    - EBS Backed AMI
+      - Podem ser pausadas por determinado período
+      - Boot muito mais rápido
+      - Dados serão persistidos no EBS
+      - Foi introduzina da AWS posteriormente e existem várias vantagens em utiliza-la
+    - Instance Volume Backed AMI
+      - Não podem ser pausada, apenas destruída ("terminated") ou reiniciada
+      - Boot lento (precisa copiar dados da S3 durante boot)
